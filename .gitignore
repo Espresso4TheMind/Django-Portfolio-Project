@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.gitignore
+blog/static/
+markmiloslavicjr/static/css/
+markmiloslavicjr/static/js/
+media_cdn/
+portfolio/static/css/
+portfolio/static/js/
+static_cdn/
