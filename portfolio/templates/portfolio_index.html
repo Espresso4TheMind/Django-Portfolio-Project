@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% load static %}
+{% block page_content %}
+<div class="row no-gutters pb-1">
+    {% for project in projects %}
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 p-1">
+        {% if 'Complete' in project.project_status %}
+        <div class="card bg-dark text-light border-success" style="box-shadow: 0px 0px 5px 0px #28a745 inset;">
+        {% elif 'In Progress' in project.project_status %}
+        <div class="card bg-dark text-light border-warning" style="box-shadow: 0px 0px 5px 0px #ffc107 inset;">
+        {% else %}
+        <div class="card bg-dark text-light border-danger" style="box-shadow: 0px 0px 5px 0px #dc3545 inset;">
+        {% endif %}
+            <div class="card-header text-center font-weight-bold text-uppercase">{{ project.title }}</div>
+            <div class="card-body">
+                <p>{{ project.description | slice:":200" }}...</p>
+                <table>
+                    <tr>
+                        <th class="align-baseline" style="width: 75px;">Status:</th>
+                        <td>
+                            {% if 'Complete' in project.project_status %}
+                            <span class="badge badge-success text-uppercase">{{ project.project_status }}</span>
+                            {% elif 'In Progress' in project.project_status %}
+                            <span class="badge badge-warning text-uppercase">{{ project.project_status }}</span>
+                            {% else %}
+                            <span class="badge badge-danger text-uppercase">{{ project.project_status }}</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="align-baseline">Timeline:</th>
+                        <td>
+                            {{ project.start_date | date:"Y.m.d" }} &nbsp;-&nbsp;
+                            {% if project.finish_date is None %}
+                            TBD
+                            {% else %}
+                            {{ project.finish_date | date:"Y.m.d" }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="align-baseline">Tech:</th>
+                        <td>
+                            <ul class="list-inline">
+                                {% for tech in project.tech.all %}
+                                <li class="list-inline-item">
+                                    <a href="{% url 'project_tech' tech.name %}" class="badge badge-pill badge-primary">{{ tech.name }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <a href="{% url 'project_details' project.pk %}" class="btn btn-primary btn-sm mt-2">Learn More</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock page_content %}

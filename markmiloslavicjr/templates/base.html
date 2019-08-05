@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Mark A. Miloslavic Jr.">
+    <meta name="copyright" content="Mark A. Miloslavic Jr.">
+    <meta name="description" content="This is a web portfolio showcasing all of my programming projects.">
+    <meta name="keywords" content="Mark,Anthony,Miloslavic,portfolio,blog,bioinformatics,data science,Python,R,SQL,HTML,CSS,Django">
+    <meta name="robots" content="index, nofollow">
+    <title>{{ page_title | title }}</title>
+    <!-- Bootstrap 4 CDN: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+            background-color: #232323;
+            /* background-image: linear-gradient(#010101, #121212, #232323, #343434); */
+            color: white;
+        }
+        nav.navbar {
+            box-shadow: 0px 0px 10px 0px #555555 inset;
+        }
+    </style>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark m-1 bg-dark">
+    <div class="navbar-brand text-truncate"><span class="small">{{ page_title | title }}</span></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-right">
+            <li class="nav-item"><a class="nav-link active" href="{% url 'homepage' %}">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="{% url 'about' %}">Bio</a></li>
+            <li class="nav-item"><a class="nav-link disabled" href="">Events</a></li>
+            <li class="nav-item"><a class="nav-link active" href="{% url 'blog_index' %}">Blog</a></li>
+            <li class="nav-item"><a class="nav-link active" href="{% url 'portfolio_index' %}">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link disabled" href="">Resume</a></li>
+            <li class="nav-item"><a class="nav-link active" href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Content area for all template pages -->
+<div class="container">
+    {% block page_content %}
+    {% endblock page_content %}
+</div>
+<!--<footer class="fixed-bottom bg-dark text-light">
+    <div><small>Copyright © 2019 Mark A. Miloslavic Jr. All Rights Reserved.</small></div>
+</footer>-->
+<!-- Bootstrap 4 and MDB 4.8.3 CDN -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('6Leewa4UAAAAAM_NaZ43zcZNhumgc1EzB8yCTvQr', {action: 'homepage'}).then(function(token) {
+        ...
+    });
+});
+</script>
+</body>
+</html>

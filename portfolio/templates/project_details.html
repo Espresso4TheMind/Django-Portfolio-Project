@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<style>
+    hr {background-color: #343434;}
+</style>
+<div class="row mb-2">
+    <!-- stats -->
+    <div class="col-12">
+        <h5 class="mt-4"><u>Project Status</u></h5>
+        <p class="lead">
+            {% if 'Complete' in project.project_status %}
+            <span class="text-success">{{ project.project_status }}</span>
+            {% elif 'In Progress' in project.project_status %}
+            <span class="text-warning">{{ project.project_status }}</span>
+            {% else %}
+            <span class="text-danger">{{ project.project_status }}</span>
+            {% endif %}
+        </p>
+        <h5 class="mt-4"><u>Project Timeline</u></h5>
+        <p class="lead">
+            {{ project.start_date | date:"l, F d, Y" }} &nbsp; - &nbsp;
+                        {% if project.finish_date is None %}
+                        TBD
+                        {% else %}
+                        {{ project.finish_date | date:"l, F d, Y" }}
+                        {% endif %}
+        </p>
+        <h5 class="mt-4"><u>Technologies Used</u></h5>
+        <ul class="list-inline lead">
+            {% for tech in project.tech.all %}
+            <li class="list-inline-item">{{ tech.name }}</li>
+            {% endfor %}
+        </ul>
+        <h5 class="mt-4"><u>Source Code</u></h5>
+        <a href="{{ project.github_link }}" class="lead text-decoration-none" target="_blank">{{ project.github_link }}</a>
+    </div>
+    <!-- description -->
+    <div class="col-12 lead">
+        <h5 class="mt-4"><u>Project Description</u></h5>
+        <div class="text-justify">
+            <p class="lead">{{ project.description | safe | linebreaks }}</p>
+        </div>
+    </div>
+</div>
+{% endblock page_content %}
