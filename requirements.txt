@@ -1,0 +1,10 @@
+certifi==2019.6.16
+Django==2.2.4
+django-scheduler==0.8.8
+icalendar==4.0.3
+psycopg2==2.8.3
+python-dateutil==2.8.0
+pytz==2019.2
+six==1.12.0
+sqlparse==0.3.0
+wincertstore==0.2
