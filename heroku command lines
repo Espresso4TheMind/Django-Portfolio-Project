@@ -1,0 +1,10 @@
+git push heroku master
+git push origin master
+git remote -v
+heroku run python manage.py <createsuperuser/makemigrations/migrate/runserver>
+heroku pg:psql
+heroku logs
+heroku login
+heroku config
+heroku git:remote -a markmiloslavicjr-portfolio
+pip freeze > requirements.txt
