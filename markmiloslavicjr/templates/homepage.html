@@ -96,6 +96,34 @@ div.card-footer {
                 <div class="card-footer text-center small">Posted {{ post.created_on | timesince }} ago</div>
             </div>
         </div>
+        {% else %}
+        <div class="col-12 col-md-6 col-lg-4 align-self-start">
+            <p class="text-center lead">Latest Blog Post</p>
+            <div class="card m-2 bg-dark">
+                <!-- CARD HEADER -->
+                <div class="card-header text-uppercase text-center small">
+                    <a href="" class="text-decoration-none stretched-link homepage"></a>No blog posts available
+                </div>
+                <!-- CARD BODY -->
+                <div class="card-body">
+                    <table class="small">
+                        <tr>
+                            <th class="align-baseline">Posted:</th>
+                            <td>null &nbsp;<span class="d-inline-block">at&nbsp; null</span></td>
+                        </tr>
+                        <tr>
+                            <th class="align-baseline" style="width: 60px;">Tags:</th>
+                            <td>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">null</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-footer text-center small">Posted null ago</div>
+            </div>
+        </div>
         {% endif %}
         <!-- LATEST PROJECT -->
         {% if project %}
@@ -148,6 +176,46 @@ div.card-footer {
                     </table>
                 </div>
                 <div class="card-footer text-center small">Posted {{ project.created_on | timesince }} ago</div>
+            </div>
+        </div>
+        {% else %}
+        <div class="col-12 col-md-6 col-lg-4 align-self-start">
+            <p class="text-center lead">Latest Project</p>
+            <div class="card m-2 bg-dark">
+                <!-- CARD HEADER -->
+                <div class="card-header text-uppercase text-center small">
+                    <a href="" class="text-decoration-none stretched-link"></a>No blog posts available
+                </div>
+                <!-- CARD BODY -->
+                <div class="card-body">
+                    <table class="small">
+                        <tr>
+                            <th class="align-baseline" style="width: 60px;">Status:</th>
+                            <td>
+                                <span class="badge text-uppercase">null</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="align-baseline">Start:</th>
+                            <td>null</td>
+                        </tr>
+                        <tr>
+                            <th class="align-baseline">Finish:</th>
+                            <td>
+                                null
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="align-baseline">Tech:</th>
+                            <td>
+                                <ul class="list-inline m-0">
+                                    <li class="list-inline-item">null</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-footer text-center small">Posted null ago</div>
             </div>
         </div>
         {% endif %}
