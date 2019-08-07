@@ -70,7 +70,6 @@ div.card-footer {
         <div class="col-12 col-md-6 col-lg-4 align-self-start">
             <p class="text-center lead">Latest Blog Post</p>
             <div class="card m-2 bg-dark">
-                <!-- CARD HEADER -->
                 <div class="card-header text-uppercase text-center small">
                     <a href="{% url 'blog_detail' post.pk %}" class="text-decoration-none stretched-link homepage"></a>{{ post.title }}
                 </div>
@@ -96,6 +95,7 @@ div.card-footer {
                 <div class="card-footer text-center small">Posted {{ post.created_on | timesince }} ago</div>
             </div>
         </div>
+        <!-- if null -->
         {% else %}
         <div class="col-12 col-md-6 col-lg-4 align-self-start">
             <p class="text-center lead">Latest Blog Post</p>
@@ -121,7 +121,7 @@ div.card-footer {
                         </tr>
                     </table>
                 </div>
-                <div class="card-footer text-center small">Posted null ago</div>
+                <div class="card-footer text-center small">Posted n ago</div>
             </div>
         </div>
         {% endif %}
@@ -130,7 +130,6 @@ div.card-footer {
         <div class="col-12 col-md-6 col-lg-4 align-self-start">
             <p class="text-center lead">Latest Project</p>
             <div class="card m-2 bg-dark">
-                <!-- CARD HEADER -->
                 <div class="card-header text-uppercase text-center small">
                     <a href="{% url 'project_details' project.pk %}" class="text-decoration-none stretched-link"></a>{{ project.title }}
                 </div>
@@ -178,13 +177,14 @@ div.card-footer {
                 <div class="card-footer text-center small">Posted {{ project.created_on | timesince }} ago</div>
             </div>
         </div>
+        <!-- if null -->
         {% else %}
         <div class="col-12 col-md-6 col-lg-4 align-self-start">
             <p class="text-center lead">Latest Project</p>
             <div class="card m-2 bg-dark">
                 <!-- CARD HEADER -->
                 <div class="card-header text-uppercase text-center small">
-                    <a href="" class="text-decoration-none stretched-link"></a>No blog posts available
+                    <a href="" class="text-decoration-none stretched-link"></a>No projects available
                 </div>
                 <!-- CARD BODY -->
                 <div class="card-body">
@@ -192,7 +192,7 @@ div.card-footer {
                         <tr>
                             <th class="align-baseline" style="width: 60px;">Status:</th>
                             <td>
-                                <span class="badge text-uppercase">null</span>
+                                <span class="badge badge-secondary text-uppercase">null</span>
                             </td>
                         </tr>
                         <tr>
@@ -201,9 +201,7 @@ div.card-footer {
                         </tr>
                         <tr>
                             <th class="align-baseline">Finish:</th>
-                            <td>
-                                null
-                            </td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <th class="align-baseline">Tech:</th>
@@ -215,7 +213,7 @@ div.card-footer {
                         </tr>
                     </table>
                 </div>
-                <div class="card-footer text-center small">Posted null ago</div>
+                <div class="card-footer text-center small">Posted n ago</div>
             </div>
         </div>
         {% endif %}

@@ -11,7 +11,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', SECRET_KEY)
 #DEBUG = True
 DEBUG = bool(int(os.environ.get('DJANGO_DEBUG', 1)))
 
-ALLOWED_HOSTS = ['markmiloslavicjr-portfolio.herokuapp.com']
+ALLOWED_HOSTS = [
+    'markmiloslavicjr-portfolio.herokuapp.com',
+    'www.miloslavicjr.com',
+]
 
 PREREQ_APPS = [
     'django.contrib.admin',
