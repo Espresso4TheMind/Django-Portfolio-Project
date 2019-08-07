@@ -13,7 +13,9 @@ DEBUG = bool(int(os.environ.get('DJANGO_DEBUG', 1)))
 
 ALLOWED_HOSTS = [
     'markmiloslavicjr-portfolio.herokuapp.com',
-    'miloslavicjr.com'
+    'www.miloslavicjr.com',
+    'localhost',
+    '127.0.0.1'
 ]
 
 PREREQ_APPS = [
