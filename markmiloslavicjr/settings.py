@@ -12,8 +12,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', SECRET_KEY)
 DEBUG = bool(int(os.environ.get('DJANGO_DEBUG', 1)))
 
 ALLOWED_HOSTS = [
-    'http://markmiloslavicjr-portfolio.herokuapp.com',
-    'http://www.miloslavicjr.com',
+    'markmiloslavicjr-portfolio.herokuapp.com',
+    'www.miloslavicjr.com',
     'localhost',
     '127.0.0.1'
 ]
