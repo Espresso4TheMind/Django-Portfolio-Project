@@ -14,7 +14,7 @@
         {% endif %}
             <div class="card-header text-center font-weight-bold text-uppercase">{{ project.title }}</div>
             <div class="card-body">
-                <p>{{ project.description | slice:":200" }}...</p>
+                <p>{{ project.description | safe | linebreaks | slice:":200" }}...</p>
                 <table>
                     <tr>
                         <th class="align-baseline" style="width: 75px;">Status:</th>
