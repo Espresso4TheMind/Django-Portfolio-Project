@@ -9,6 +9,7 @@ class Technology(models.Model):
     class Meta:
         verbose_name = 'technology'
         verbose_name_plural = 'technologies'
+        ordering = ['name']
 
     def __str__(self):
         return self.name
@@ -26,12 +27,6 @@ class Project(models.Model):
     display = models.CharField(choices=DISPLAY_CHOICES, max_length=25)
     title = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
-    # introduction = models.TextField(null=True, blank=True)
-    # methods = models.TextField(null=True, blank=True)
-    # results = models.TextField(null=True, blank=True)
-    # discussion = models.TextField(null=True, blank=True)
-    # acknowledgments = models.TextField(null=True, blank=True)
-    # literature_cited = models.TextField(null=True, blank=True)
     project_status = models.CharField(choices=PROJECT_STATUS_CHOICES, max_length=25)
     start_date = models.DateField()
     finish_date = models.DateField(null=True, blank=True)

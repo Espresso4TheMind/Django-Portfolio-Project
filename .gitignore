@@ -1,4 +1,4 @@
-.idea
+.idea/
 .gitignore
 *.iml
 secret_key.txt
