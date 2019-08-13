@@ -1,7 +1,6 @@
 .idea/
 .gitignore
 *.iml
-secret_key.txt
 out
 gen
 blog/static/
