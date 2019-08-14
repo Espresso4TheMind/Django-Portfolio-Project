@@ -10,6 +10,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', SECRET_KEY)
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = bool(int(os.environ.get('DJANGO_DEBUG', 1)))
+SECURE_SSL_REDIRECT = bool(int(os.environ.get('SECURE_SSL_REDIRECT', 0)))
 
 ALLOWED_HOSTS = [
     'markmiloslavicjr-portfolio.herokuapp.com',
