@@ -37,7 +37,7 @@
             <li class="nav-item"><a class="nav-link disabled" href="">Events</a></li>
             <li class="nav-item"><a class="nav-link active" href="{% url 'blog_index' %}">Blog</a></li>
             <li class="nav-item"><a class="nav-link active" href="{% url 'portfolio_index' %}">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link active" href="static_cdn/docs/Resume Miloslavic.pdf" target="_blank">Resume</a></li>
+            <li class="nav-item"><a class="nav-link active" href="{% static '/docs/Resume Miloslavic.pdf' %}" target="_blank">Resume</a></li>
             <li class="nav-item"><a class="nav-link active" href="{% url 'contact' %}">Contact</a></li>
         </ul>
     </div>
