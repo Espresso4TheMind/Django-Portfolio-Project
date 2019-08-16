@@ -4,7 +4,7 @@ from portfolio.models import Project
 
 def portfolio_index(request):
     page_title = 'Programming Portfolio'
-    projects = Project.objects.exclude(display='Private')
+    projects = Project.objects.exclude(display='Private').order_by('project_status', '-start_date')
     context = {
         'projects': projects,
         'page_title': page_title,

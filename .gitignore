@@ -3,6 +3,7 @@
 *.iml
 out
 gen
+secret_key.txt
 blog/static/
 markmiloslavicjr/static/css/
 markmiloslavicjr/static/js/
