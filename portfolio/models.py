@@ -18,9 +18,9 @@ class Technology(models.Model):
 class Project(models.Model):
     DISPLAY_CHOICES = [('Public', 'Public'), ('Private', 'Private'),]
     PROJECT_STATUS_CHOICES = [
+        ('Indefinite', 'Indefinite'),
         ('In Progress', 'In Progress'),
         ('Complete', 'Complete'),
-        ('Indefinite', 'Indefinite'),
     ]
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
