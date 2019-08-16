@@ -18,7 +18,6 @@ class Technology(models.Model):
 class Project(models.Model):
     DISPLAY_CHOICES = [('Public', 'Public'), ('Private', 'Private'),]
     PROJECT_STATUS_CHOICES = [
-        ('Indefinite', 'Indefinite'),
         ('In Progress', 'In Progress'),
         ('Complete', 'Complete'),
     ]
