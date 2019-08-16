@@ -314,7 +314,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565966503673</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fixing repo mistake">
+      <created>1565967016647</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1565967016647</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fixing repo mistake">
+      <created>1565967033924</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1565967033924</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">
@@ -369,7 +383,8 @@
     <MESSAGE value="Changed wording to Homepage and Bio&#10;Changed queryset filter in views.py" />
     <MESSAGE value="Remove server and server.key files from repo" />
     <MESSAGE value="Reordered PROJECT_STATUS_CHOICES&#10;Pasted over Resume Miloslavic pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reordered PROJECT_STATUS_CHOICES&#10;Pasted over Resume Miloslavic pdf" />
+    <MESSAGE value="Fixing repo mistake" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing repo mistake" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
