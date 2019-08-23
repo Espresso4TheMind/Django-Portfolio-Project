@@ -43,4 +43,4 @@ def events(request):
     context = {
         'page_title': page_title
     }
-    return render(request, 'fullcalendar.html', context)
+    return render(request, 'fullcalendar_base.html', context)
