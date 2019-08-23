@@ -3,6 +3,7 @@ from blog.models import Post
 from portfolio.models import Project
 from django.core.exceptions import ObjectDoesNotExist
 
+
 def homepage(request):
     page_title = 'Home'
     try:
@@ -35,3 +36,11 @@ def contact(request):
         'page_title': page_title
     }
     return render(request, 'contact.html', context)
+
+
+def events(request):
+    page_title = 'Events'
+    context = {
+        'page_title': page_title
+    }
+    return render(request, 'fullcalendar.html', context)

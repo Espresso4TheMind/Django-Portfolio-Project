@@ -3,23 +3,11 @@ import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# with open('./secret_key.txt') as f:
-#     SECRET_KEY = f.read().strip()
-# SECRET_KEY = os.environ.get('SECRET_KEY', SECRET_KEY)
-
-# if open('./secret_key.txt') is True:
-#     with open('./secret_key.txt') as f:
-#         SECRET_KEY = f.read().strip()
-# else:
-#     SECRET_KEY = os.environ.get('SECRET_KEY')
-
 try:
     with open('./secret_key.txt') as f:
         SECRET_KEY = f.read().strip()
 except FileNotFoundError:
     SECRET_KEY = os.environ.get('SECRET_KEY')
-else:
-    pass
 
 DEBUG = bool(int(os.environ.get('DJANGO_DEBUG', 1)))
 
